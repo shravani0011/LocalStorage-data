@@ -25,11 +25,11 @@ function addForm(e){
     itemList.appendChild(p);
     
     var inputfname= document.getElementById("fname");
-    localStorage.setItem("fname", inputfname.value); 
+    // localStorage.setItem("fname", inputfname.value); 
     // console.log(localStorage.getItem("fname", inputfname.value)); 
 
     var inputlname= document.getElementById("lname");
-    localStorage.setItem("lname", inputlname.value); 
+    // localStorage.setItem("lname", inputlname.value); 
     // console.log(localStorage.getItem("lname", inputlname.value));   
 
     let myObj = {
@@ -38,7 +38,7 @@ function addForm(e){
     };
 
     let myobj_serialized = JSON.stringify(myObj); 
-    localStorage.setItem("myObj", myobj_serialized); 
-    let myObj_deserialized = JSON.parse(localStorage.getItem("myObj"));  
+    localStorage.setItem(myObj.inputfname,myobj_serialized); 
+    let myObj_deserialized = JSON.parse(localStorage.getItem(myObj.inputfname));  
     console.log(myObj_deserialized);  
 }
